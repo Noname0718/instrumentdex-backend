@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: instrumentdex-backend
+  data:
+    mongodb:
+      uri: ${MONGODB_URI}
