@@ -1,0 +1,43 @@
+{
+  "instruments": [
+    {
+      "_id": "guitar",
+      "nameKo": "기타",
+      "nameEn": "Guitar",
+      "family": "STRING",
+      "difficultyLevel": "EASY",
+      "description": "코드 위주로 입문하기 좋은 악기.",
+      "imageUrl": "/images/guitar.jpg",
+      "tags": ["버스킹", "코드"]
+    },
+    {
+      "_id": "piano",
+      "nameKo": "피아노",
+      "nameEn": "Piano",
+      "family": "KEYBOARD",
+      "difficultyLevel": "BEGINNER",
+      "description": "기본 이론 공부에 좋은 악기.",
+      "imageUrl": "/images/piano.jpg",
+      "tags": ["클래식", "반주"]
+    }
+  ],
+  "practice_songs": [
+    {
+      "_id": "guitar-001",
+      "title": "Stand By Me",
+      "artist": "Ben E. King",
+      "instrumentId": "guitar",
+      "level": "BEGINNER",
+      "bpm": 120,
+      "tags": ["코드", "발라드"]
+    },
+    {
+      "_id": "piano-001",
+      "title": "River Flows in You",
+      "artist": "Yiruma",
+      "instrumentId": "piano",
+      "level": "NORMAL",
+      "tags": ["뉴에이지"]
+    }
+  ]
+}
