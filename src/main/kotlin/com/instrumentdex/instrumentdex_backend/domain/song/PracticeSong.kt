@@ -2,6 +2,7 @@ package com.instrumentdex.instrumentdex_backend.domain.song
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
+import java.time.Instant
 
 @Document(collection = "practice_songs")
 data class PracticeSong(
@@ -21,5 +22,8 @@ data class PracticeSong(
     val youtubeUrl: String? = null,
     val sheetUrl: String? = null,
 
-    val tags: List<String> = emptyList()
+    val tags: List<String> = emptyList(),
+
+    val createdAt: Instant = Instant.now(),
+    val updatedAt: Instant = Instant.now()
 )
