@@ -5,12 +5,15 @@ import com.instrumentdex.instrumentdex_backend.dto.instrument.CreateInstrumentRe
 import com.instrumentdex.instrumentdex_backend.dto.instrument.InstrumentDetailResponse
 import com.instrumentdex.instrumentdex_backend.dto.instrument.InstrumentListResponse
 import com.instrumentdex.instrumentdex_backend.dto.instrument.UpdateInstrumentRequest
+import com.instrumentdex.instrumentdex_backend.dto.song.PracticeSongListResponse
 import com.instrumentdex.instrumentdex_backend.repository.InstrumentRepository
+import com.instrumentdex.instrumentdex_backend.repository.PracticeSongRepository
 import org.springframework.stereotype.Service
 
 @Service
 class InstrumentService(
-    private val instrumentRepository: InstrumentRepository
+    private val instrumentRepository: InstrumentRepository,
+    private val practiceSongRepository: PracticeSongRepository
 ) {
 
     // 리스트 조회
@@ -19,10 +22,26 @@ class InstrumentService(
             .map { it.toListDto() }
 
     // 단일 조회
-    fun getInstrument(id: String): InstrumentDetailResponse =
-        instrumentRepository.findById(id)
-            .orElseThrow { IllegalArgumentException("Instrument not found: $id") }
-            .toDetailDto()
+    fun getInstrument(id: String): InstrumentDetailResponse {
+        val instrument = instrumentRepository.findById(id)
+            .orElseThrow { IllegalArgumentException("악기를 찾을 수 없습니다. id=$id") }
+
+        val songs = practiceSongRepository.findByInstrumentId(id)
+            .map { song ->
+                PracticeSongListResponse(
+                    id = song.id,
+                    title = song.title,
+                    artist = song.artist,
+                    instrumentId = song.instrumentId,
+                    level = song.level,
+                    bpm = song.bpm,
+                    key = song.key,
+                    tags = song.tags
+                )
+            }
+
+        return instrument.toDetailDto(songs)
+    }
 
     // 생성
     fun createInstrument(request: CreateInstrumentRequest): InstrumentDetailResponse {
@@ -85,7 +104,9 @@ class InstrumentService(
             tags = tags
         )
 
-    private fun Instrument.toDetailDto(): InstrumentDetailResponse =
+    private fun Instrument.toDetailDto(
+        songs: List<PracticeSongListResponse> = emptyList()
+    ): InstrumentDetailResponse =
         InstrumentDetailResponse(
             id = id,
             nameKo = nameKo,
@@ -94,6 +115,7 @@ class InstrumentService(
             difficultyLevel = difficultyLevel,
             description = description,
             imageUrl = imageUrl,
-            tags = tags
+            tags = tags,
+            songs = songs
         )
 }
