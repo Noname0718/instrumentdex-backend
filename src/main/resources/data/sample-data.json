@@ -29,6 +29,10 @@
       "instrumentId": "guitar",
       "level": "BEGINNER",
       "bpm": 120,
+      "key": "A",
+      "description": "기타 코드 전환 연습에 좋은 명곡",
+      "youtubeUrl": "https://www.youtube.com/watch?v=3ITQpsjRSL4",
+      "sheetUrl": "https://musescore.com",
       "tags": ["코드", "발라드"]
     },
     {
@@ -37,6 +41,11 @@
       "artist": "Yiruma",
       "instrumentId": "piano",
       "level": "NORMAL",
+      "bpm": 90,
+      "key": "C",
+      "description": "감성적인 터치 연습용 대표곡",
+      "youtubeUrl": "https://www.youtube.com/watch?v=7maJOI3QMu0",
+      "sheetUrl": "https://musescore.com",
       "tags": ["뉴에이지"]
     }
   ]
