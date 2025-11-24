@@ -48,5 +48,275 @@
       "sheetUrl": "https://musescore.com",
       "tags": ["뉴에이지"]
     }
+  ],
+  "songs": [
+    {
+      "id": "river-flows-in-you",
+      "title": "River Flows In You",
+      "artist": "Yiruma",
+      "genre": "뉴에이지",
+      "difficulty": "NORMAL",
+      "tags": ["피아노", "연습곡", "뉴에이지"],
+      "sections": [
+        {
+          "instrumentId": "piano",
+          "level": "NORMAL",
+          "role": "MAIN",
+          "youtubeUrl": "https://youtu.be/piano_river_flows",
+          "sheetUrl": "https://example.com/sheet/river_flows_piano.pdf",
+          "note": "원곡 피아노 솔로 버전"
+        },
+        {
+          "instrumentId": "violin",
+          "level": "NORMAL",
+          "role": "MELODY",
+          "youtubeUrl": "https://youtu.be/violin_river_flows",
+          "sheetUrl": null,
+          "note": "바이올린 멜로디 편곡"
+        }
+      ]
+    },
+    {
+      "id": "kiss-the-rain",
+      "title": "Kiss The Rain",
+      "artist": "Yiruma",
+      "genre": "뉴에이지",
+      "difficulty": "EASY",
+      "tags": ["피아노", "발라드", "연습곡"],
+      "sections": [
+        {
+          "instrumentId": "piano",
+          "level": "EASY",
+          "role": "MAIN",
+          "youtubeUrl": "https://youtu.be/piano_kiss_the_rain",
+          "sheetUrl": "https://example.com/sheet/kiss_the_rain_easy.pdf",
+          "note": "초보용 간단 버전"
+        }
+      ]
+    },
+    {
+      "id": "spring-day",
+      "title": "봄날",
+      "artist": "BTS",
+      "genre": "K-POP",
+      "difficulty": "NORMAL",
+      "tags": ["피아노", "기타", "K-POP"],
+      "sections": [
+        {
+          "instrumentId": "piano",
+          "level": "NORMAL",
+          "role": "ACCOMPANIMENT",
+          "youtubeUrl": "https://youtu.be/piano_spring_day",
+          "sheetUrl": "https://example.com/sheet/spring_day_piano.pdf",
+          "note": "코드 + 간단 멜로디 반주"
+        },
+        {
+          "instrumentId": "guitar",
+          "level": "EASY",
+          "role": "ACCOMPANIMENT",
+          "youtubeUrl": "https://youtu.be/guitar_spring_day",
+          "sheetUrl": "https://example.com/sheet/spring_day_guitar_chords.pdf",
+          "note": "기본 코드 스트로크"
+        }
+      ]
+    },
+    {
+      "id": "cherry-blossom-ending",
+      "title": "벚꽃 엔딩",
+      "artist": "버스커 버스커",
+      "genre": "K-POP",
+      "difficulty": "BEGINNER",
+      "tags": ["기타", "버스킹", "연습곡"],
+      "sections": [
+        {
+          "instrumentId": "guitar",
+          "level": "BEGINNER",
+          "role": "ACCOMPANIMENT",
+          "youtubeUrl": "https://youtu.be/guitar_cherry_blossom",
+          "sheetUrl": "https://example.com/sheet/cherry_blossom_guitar_chords.pdf",
+          "note": "입문용 4코드 스트로크"
+        },
+        {
+          "instrumentId": "bass",
+          "level": "EASY",
+          "role": "ARRANGEMENT",
+          "youtubeUrl": "https://youtu.be/bass_cherry_blossom",
+          "sheetUrl": null,
+          "note": "기초 베이스 라인 연습"
+        }
+      ]
+    },
+    {
+      "id": "good-day",
+      "title": "좋은 날",
+      "artist": "아이유",
+      "genre": "K-POP",
+      "difficulty": "HARD",
+      "tags": ["보컬", "피아노", "발라드"],
+      "sections": [
+        {
+          "instrumentId": "piano",
+          "level": "NORMAL",
+          "role": "ACCOMPANIMENT",
+          "youtubeUrl": "https://youtu.be/piano_good_day",
+          "sheetUrl": "https://example.com/sheet/good_day_piano.pdf",
+          "note": "보컬 반주용 피아노"
+        },
+        {
+          "instrumentId": "violin",
+          "level": "HARD",
+          "role": "MELODY",
+          "youtubeUrl": "https://youtu.be/violin_good_day",
+          "sheetUrl": null,
+          "note": "고음역 멜로디 연습"
+        }
+      ]
+    },
+    {
+      "id": "canon-d",
+      "title": "Canon in D",
+      "artist": "Pachelbel",
+      "genre": "클래식",
+      "difficulty": "NORMAL",
+      "tags": ["바이올린", "첼로", "클래식"],
+      "sections": [
+        {
+          "instrumentId": "violin",
+          "level": "NORMAL",
+          "role": "MELODY",
+          "youtubeUrl": "https://youtu.be/violin_canon_d",
+          "sheetUrl": "https://example.com/sheet/canon_d_violin.pdf",
+          "note": "1바이올린 파트"
+        },
+        {
+          "instrumentId": "cello",
+          "level": "EASY",
+          "role": "ACCOMPANIMENT",
+          "youtubeUrl": "https://youtu.be/cello_canon_d",
+          "sheetUrl": "https://example.com/sheet/canon_d_cello.pdf",
+          "note": "저음 반복 베이스 패턴"
+        },
+        {
+          "instrumentId": "piano",
+          "level": "NORMAL",
+          "role": "ARRANGEMENT",
+          "youtubeUrl": "https://youtu.be/piano_canon_d",
+          "sheetUrl": null,
+          "note": "피아노 솔로 편곡"
+        }
+      ]
+    },
+    {
+      "id": "nella-fantasia",
+      "title": "Nella Fantasia",
+      "artist": "Ennio Morricone",
+      "genre": "클래식/OST",
+      "difficulty": "EASY",
+      "tags": ["플룻", "오케스트라"],
+      "sections": [
+        {
+          "instrumentId": "flute",
+          "level": "EASY",
+          "role": "MELODY",
+          "youtubeUrl": "https://youtu.be/flute_nella_fantasia",
+          "sheetUrl": "https://example.com/sheet/nella_fantasia_flute.pdf",
+          "note": "호흡 연습용 플룻 멜로디"
+        }
+      ]
+    },
+    {
+      "id": "autumn-leaves",
+      "title": "Autumn Leaves",
+      "artist": "Joseph Kosma",
+      "genre": "재즈",
+      "difficulty": "HARD",
+      "tags": ["재즈", "기타", "피아노", "임프로"],
+      "sections": [
+        {
+          "instrumentId": "guitar",
+          "level": "HARD",
+          "role": "ARRANGEMENT",
+          "youtubeUrl": "https://youtu.be/jazz_guitar_autumn_leaves",
+          "sheetUrl": "https://example.com/sheet/autumn_leaves_guitar.pdf",
+          "note": "재즈 기타 컴핑 + 솔로"
+        },
+        {
+          "instrumentId": "piano",
+          "level": "HARD",
+          "role": "ACCOMPANIMENT",
+          "youtubeUrl": "https://youtu.be/jazz_piano_autumn_leaves",
+          "sheetUrl": null,
+          "note": "워킹 베이스 & 보이싱 연습"
+        },
+        {
+          "instrumentId": "saxophone",
+          "level": "HARD",
+          "role": "MELODY",
+          "youtubeUrl": "https://youtu.be/sax_autumn_leaves",
+          "sheetUrl": null,
+          "note": "스케일/애드립 연습"
+        }
+      ]
+    },
+    {
+      "id": "amazing-grace",
+      "title": "Amazing Grace",
+      "artist": "Traditional",
+      "genre": "CCM",
+      "difficulty": "BEGINNER",
+      "tags": ["CCM", "피아노", "플룻"],
+      "sections": [
+        {
+          "instrumentId": "piano",
+          "level": "BEGINNER",
+          "role": "ACCOMPANIMENT",
+          "youtubeUrl": "https://youtu.be/piano_amazing_grace",
+          "sheetUrl": "https://example.com/sheet/amazing_grace_easy_piano.pdf",
+          "note": "예배 반주 입문용 코드"
+        },
+        {
+          "instrumentId": "flute",
+          "level": "BEGINNER",
+          "role": "MELODY",
+          "youtubeUrl": "https://youtu.be/flute_amazing_grace",
+          "sheetUrl": null,
+          "note": "기본 음계 연습용 멜로디"
+        }
+      ]
+    },
+    {
+      "id": "rhythm-of-the-night",
+      "title": "Rhythm of the Night",
+      "artist": "DeBarge",
+      "genre": "팝/펑크",
+      "difficulty": "NORMAL",
+      "tags": ["드럼", "베이스", "그루브"],
+      "sections": [
+        {
+          "instrumentId": "drums",
+          "level": "NORMAL",
+          "role": "MAIN",
+          "youtubeUrl": "https://youtu.be/drums_rhythm_of_the_night",
+          "sheetUrl": "https://example.com/sheet/rhythm_of_the_night_drums.pdf",
+          "note": "하이햇 패턴 + 킥/스네어 그루브 연습"
+        },
+        {
+          "instrumentId": "bass",
+          "level": "NORMAL",
+          "role": "ACCOMPANIMENT",
+          "youtubeUrl": "https://youtu.be/bass_rhythm_of_the_night",
+          "sheetUrl": null,
+          "note": "펑키 베이스 라인 연습"
+        },
+        {
+          "instrumentId": "conga",
+          "level": "EASY",
+          "role": "ARRANGEMENT",
+          "youtubeUrl": "https://youtu.be/conga_rhythm_of_the_night",
+          "sheetUrl": null,
+          "note": "라틴 퍼커션 보강 리듬"
+        }
+      ]
+    }
   ]
 }
