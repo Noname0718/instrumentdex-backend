@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/practice-songs")
 @CrossOrigin(origins = ["*"])
 class PracticeSongController(
     private val practiceSongService: PracticeSongService
 ) {
     // 연습곡 리스트 + 필터
-    @GetMapping(value = ["/songs", "/practice-songs"])
+    @GetMapping
     fun getSongs(
         @RequestParam(required = false) instrumentId: String?,
         @RequestParam(required = false) level: String?,
@@ -39,13 +39,13 @@ class PracticeSongController(
     }
 
     // 연습곡 상세
-    @GetMapping(value = ["/songs/{id}", "/practice-songs/{id}"])
+    @GetMapping("/{id}")
     fun getSong(@PathVariable id: String): PracticeSongDetailResponse {
         return practiceSongService.getSong(id)
     }
 
     // 연습곡 생성 (관리자)
-    @PostMapping(value = ["/songs", "/practice-songs"])
+    @PostMapping
     fun createSong(
         @RequestBody request: CreatePracticeSongRequest
     ): PracticeSongDetailResponse {
@@ -53,7 +53,7 @@ class PracticeSongController(
     }
 
     // 연습곡 부분 수정 (PATCH)
-    @PatchMapping(value = ["/songs/{id}", "/practice-songs/{id}"])
+    @PatchMapping("/{id}")
     fun updateSong(
         @PathVariable id: String,
         @RequestBody request: UpdatePracticeSongRequest
@@ -62,7 +62,7 @@ class PracticeSongController(
     }
 
     // 연습곡 삭제
-    @DeleteMapping(value = ["/songs/{id}", "/practice-songs/{id}"])
+    @DeleteMapping("/{id}")
     fun deleteSong(@PathVariable id: String) {
         practiceSongService.deleteSong(id)
     }
