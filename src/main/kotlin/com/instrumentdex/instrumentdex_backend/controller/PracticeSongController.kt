@@ -5,6 +5,8 @@ import com.instrumentdex.instrumentdex_backend.dto.song.PracticeSongDetailRespon
 import com.instrumentdex.instrumentdex_backend.dto.song.PracticeSongListResponse
 import com.instrumentdex.instrumentdex_backend.dto.song.UpdatePracticeSongRequest
 import com.instrumentdex.instrumentdex_backend.service.PracticeSongService
+import org.springframework.http.HttpStatus
+import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -29,27 +31,29 @@ class PracticeSongController(
         @RequestParam(required = false) level: String?,
         @RequestParam(required = false) q: String?,
         @RequestParam(required = false) tag: String?
-    ): List<PracticeSongListResponse> {
-        return practiceSongService.getSongs(
+    ): ResponseEntity<List<PracticeSongListResponse>> {
+        val songs = practiceSongService.getSongs(
             instrumentId = instrumentId,
             level = level,
             q = q,
             tag = tag
         )
+        return ResponseEntity.ok(songs)
     }
 
     // 연습곡 상세
     @GetMapping("/{id}")
-    fun getSong(@PathVariable id: String): PracticeSongDetailResponse {
-        return practiceSongService.getSong(id)
+    fun getSong(@PathVariable id: String): ResponseEntity<PracticeSongDetailResponse> {
+        return ResponseEntity.ok(practiceSongService.getSong(id))
     }
 
     // 연습곡 생성 (관리자)
     @PostMapping
     fun createSong(
         @RequestBody request: CreatePracticeSongRequest
-    ): PracticeSongDetailResponse {
-        return practiceSongService.createSong(request)
+    ): ResponseEntity<PracticeSongDetailResponse> {
+        val created = practiceSongService.createSong(request)
+        return ResponseEntity.status(HttpStatus.CREATED).body(created)
     }
 
     // 연습곡 부분 수정 (PATCH)
@@ -57,13 +61,14 @@ class PracticeSongController(
     fun updateSong(
         @PathVariable id: String,
         @RequestBody request: UpdatePracticeSongRequest
-    ): PracticeSongDetailResponse {
-        return practiceSongService.updateSong(id, request)
+    ): ResponseEntity<PracticeSongDetailResponse> {
+        return ResponseEntity.ok(practiceSongService.updateSong(id, request))
     }
 
     // 연습곡 삭제
     @DeleteMapping("/{id}")
-    fun deleteSong(@PathVariable id: String) {
+    fun deleteSong(@PathVariable id: String): ResponseEntity<Void> {
         practiceSongService.deleteSong(id)
+        return ResponseEntity.noContent().build()
     }
 }

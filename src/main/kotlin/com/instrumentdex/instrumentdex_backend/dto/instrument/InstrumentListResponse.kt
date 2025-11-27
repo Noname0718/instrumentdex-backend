@@ -9,5 +9,6 @@ data class InstrumentListResponse(
     val nameEn: String?,
     val family: String,
     val difficultyLevel: String,
+    val imageUrl: String?,
     val tags: List<String>
 )

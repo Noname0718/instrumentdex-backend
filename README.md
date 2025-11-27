@@ -5,8 +5,8 @@ This Spring Boot + MongoDB backend powers the InstrumentDex web experience. It e
 ## Static image hosting
 
 - Place instrument or practice song thumbnails under `src/main/resources/static/images` (sample placeholders are already committed).
-- Every file becomes available through `http://localhost:8080/images/<file-name>` once the app is running. Example: `http://localhost:8080/images/guitar.jpg`.
-- Reference the same relative path (`/images/guitar.jpg`) from the `imageUrl` fields that are returned by the API and consumed by the frontend `<img />` tags.
+- Every file becomes available through `http://localhost:8080/images/<file-name>` once the app is running. Example: `http://localhost:8080/images/guitar.png`.
+- Reference the same relative path (`/images/guitar.png`) from the `imageUrl` fields that are returned by the API and consumed by the frontend `<img />` tags.
 
 ## Practice song endpoints
 

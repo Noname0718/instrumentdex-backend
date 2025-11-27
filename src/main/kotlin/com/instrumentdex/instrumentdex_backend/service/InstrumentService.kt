@@ -101,6 +101,7 @@ class InstrumentService(
             nameEn = nameEn,
             family = family,
             difficultyLevel = difficultyLevel,
+            imageUrl = imageUrl,
             tags = tags
         )
 
